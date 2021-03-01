@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Skin
+  - Leg
+  - Foot
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 1878451471
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Legs
+    uniqueID: 3313733987
+    locked: 0
+  - name: Shoes
+    uniqueID: 2042843253
+    locked: 0
+  - name: Body
+    uniqueID: 1217980805
+    locked: 0
+  - name: Arms
+    uniqueID: 2677406913
+    locked: 0
+  - name: Ears
+    uniqueID: 2647224859
+    locked: 0
+  - name: Head
+    uniqueID: 2668069241
+    locked: 0
+  - name: Face
+    uniqueID: 3049652463
+    locked: 0
+  - name: Hair
+    uniqueID: 204004981
+    locked: 0
+  - name: HUD
+    uniqueID: 114250447
+    locked: 0
