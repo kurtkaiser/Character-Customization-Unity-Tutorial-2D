@@ -36,4 +36,11 @@ public class BodyPartScript : MonoBehaviour
     {
         return index;
     }
+
+    public void UpdateToNextSprite()
+    {
+        if (++index > sprites.Length - 1) index = 0;
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].down;
+        
+    }
 }
