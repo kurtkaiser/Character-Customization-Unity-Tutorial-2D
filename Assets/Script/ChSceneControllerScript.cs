@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,7 +36,7 @@ public class ChSceneControllerScript : MonoBehaviour
         int rndSpriteIndex;
         for (int i = 0; i < len; i++)
         {
-            rndSpriteIndex = Random.Range(0, playerScript.bodyParts[i].GetSpritesLength());
+            rndSpriteIndex = UnityEngine.Random.Range(0, playerScript.bodyParts[i].GetSpritesLength());
             playerScript.bodyParts[i].UpdateSprite(rndSpriteIndex);
         }
         MatchSprites("Leg");
@@ -86,5 +87,10 @@ public class ChSceneControllerScript : MonoBehaviour
             MatchSprites("Leg");
             MatchSprites("Foot");
         }
+    }
+
+    public void ChangeCurrentPartColor(Color32 newColor)
+    {
+        playerScript.bodyParts[partIndex].UpdateSpriteColor(newColor);
     }
 }

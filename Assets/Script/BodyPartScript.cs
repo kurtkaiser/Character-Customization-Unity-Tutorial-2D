@@ -41,6 +41,10 @@ public class BodyPartScript : MonoBehaviour
     {
         if (++index > sprites.Length - 1) index = 0;
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].down;
-        
+    }
+
+    public void UpdateSpriteColor(Color32 newColor)
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = newColor;
     }
 }
