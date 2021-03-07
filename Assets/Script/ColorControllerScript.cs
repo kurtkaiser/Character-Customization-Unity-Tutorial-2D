@@ -29,7 +29,22 @@ public class ColorControllerScript : MonoBehaviour
     private String[] HexHairColors =
        { "#fbe7a1", "#d9b380", "#CC9966", "#75250a", "#652A0E",
          "#634933", "#5A3825",  "#3D2314", "#500a09", "#201123",
-        "#23120B", "#010203", "#8d827a", "#505050", "#F3EBE1"};
+        "#23120B", "#010203", "#8d827a", "#505050", "#F3EBE1"
+    };
+
+    private String[] HexSkinColors =
+        { "#fbe7a1", "#f1c27d", "#CAA667", "#d9b380", "#CC9966",
+        "#AF6E51", "#652A0E", "#c68642", "#634933",  "#5A3825",
+        "#8d5524", "#3D2314", "#23120B" , "#010203", "#656d43"
+    };
+
+    private String[] HexCrayonColors =
+       { "#fbe7a1", "#f1c27d", "#CAA667", "#d9b380", "#CC9966",
+        "#AF6E51", "#652A0E", "#c68642", "#634933",  "#5A3825",
+        "#8d5524", "#3D2314", "#23120B" , "#010203", "#656d43"
+    };
+
+
 
     private void Start()
     {

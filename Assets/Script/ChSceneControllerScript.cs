@@ -93,4 +93,10 @@ public class ChSceneControllerScript : MonoBehaviour
     {
         playerScript.bodyParts[partIndex].UpdateSpriteColor(newColor);
     }
+
+    public string GetCurrentPart()
+    {
+        return bodyPartNames[partIndex];
+    }
+
 }
