@@ -9,12 +9,12 @@ public class ChSceneControllerScript : MonoBehaviour
 
     // Scene UI
     public ColorControllerScript colorController;
+    public Button startBtn;
     public Button randomBtn;
     public GameObject bodyPartBtn;
     public Button leftArrowBtn;
     public Button rightArrowBtn;
     public Toggle sleevesToggle;
-    public Toggle hatToggle;
 
     // Script variables
     public PlayerScript playerScript;
@@ -35,9 +35,6 @@ public class ChSceneControllerScript : MonoBehaviour
         bodyPartBtn.GetComponent<Button>().onClick.AddListener(() => ChangeBodyPartClicked());
         sleevesToggle.onValueChanged.AddListener(delegate {
             ToggleSleeves(sleevesToggle);
-        });
-        hatToggle.onValueChanged.AddListener(delegate {
-            ToggleHat(hatToggle);
         });
         ArrowClicked(0);
     }
