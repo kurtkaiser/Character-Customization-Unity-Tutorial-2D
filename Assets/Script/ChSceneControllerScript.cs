@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class ChSceneControllerScript : MonoBehaviour
 {
-    
+
     // Scene UI
+    public ColorControllerScript colorController;
     public Button randomBtn;
     public GameObject bodyPartBtn;
     public Button leftArrowBtn;
@@ -17,10 +18,12 @@ public class ChSceneControllerScript : MonoBehaviour
     public PlayerScript playerScript;
     private string[] bodyPartNames;
     private int partIndex = 0;
+    private GameObject[] skinBodyParts;
 
     void Start()
     {
         bodyPartNames = GetPlayerBodyPartNames();
+        skinBodyParts = GameObject.FindGameObjectsWithTag("Skin");
 
         randomBtn.onClick.AddListener(() => RandomPlayerSprites());
         leftArrowBtn.onClick.AddListener(() => ArrowClicked(1));
@@ -64,6 +67,16 @@ public class ChSceneControllerScript : MonoBehaviour
             partIndex = bodyPartNames.Length - 1;
         }
         bodyPartBtn.transform.GetChild(0).gameObject.GetComponent<Text>().text = bodyPartNames[partIndex];
+        if (playerScript.bodyParts[partIndex].CompareTag("Skin"))
+        {
+            colorController.ChangeButtonColors(colorController.GetHexSkinColors());
+        } else if (playerScript.bodyParts[partIndex].CompareTag("Hair"))
+        {
+            colorController.ChangeButtonColors(colorController.GetHexHairColors());
+        } else
+        {
+            colorController.ChangeButtonColors(colorController.GetHexDefaultColors());
+        }
     }
 
     private string[] GetPlayerBodyPartNames()
@@ -91,12 +104,18 @@ public class ChSceneControllerScript : MonoBehaviour
 
     public void ChangeCurrentPartColor(Color32 newColor)
     {
-        playerScript.bodyParts[partIndex].UpdateSpriteColor(newColor);
-    }
 
-    public string GetCurrentPart()
-    {
-        return bodyPartNames[partIndex];
+        if (playerScript.bodyParts[partIndex].CompareTag("Skin"))
+        {
+            foreach (GameObject part in skinBodyParts)
+            {
+                part.GetComponent<BodyPartScript>().UpdateSpriteColor(newColor);
+            }
+        }
+        else
+        {
+            playerScript.bodyParts[partIndex].UpdateSpriteColor(newColor);
+        }
     }
 
 }

@@ -1236,6 +1236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49d9f28ba33f804fb343d97f83ed796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorController: {fileID: 1413420782}
   randomBtn: {fileID: 1544572068}
   bodyPartBtn: {fileID: 2140617716}
   leftArrowBtn: {fileID: 65758214}
@@ -1943,7 +1944,7 @@ GameObject:
   - component: {fileID: 654057229}
   m_Layer: 0
   m_Name: Hair
-  m_TagString: Untagged
+  m_TagString: Hair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5763,7 +5764,7 @@ SpriteRenderer:
   m_SortingLayerID: -1245314833
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb9c0586b878d534fabbb26b89439b30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8683d1beac220341a4fa17472cab5c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5788,7 +5789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites:
   - name: Default
-    down: {fileID: 21300000, guid: eb9c0586b878d534fabbb26b89439b30, type: 3}
+    down: {fileID: 21300000, guid: e8683d1beac220341a4fa17472cab5c7, type: 3}
     left: {fileID: 21300000, guid: 25178594704ff3c40a90d672d062ab5e, type: 3}
   - name: Frown
     down: {fileID: 21300000, guid: 101b1643c2630d742ba02dcc4186db04, type: 3}
@@ -6141,7 +6142,7 @@ GameObject:
   - component: {fileID: 1912148080}
   m_Layer: 0
   m_Name: Eyebrows
-  m_TagString: Untagged
+  m_TagString: Hair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

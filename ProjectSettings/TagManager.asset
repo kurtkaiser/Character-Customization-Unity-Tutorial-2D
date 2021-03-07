@@ -8,6 +8,7 @@ TagManager:
   - Leg
   - Foot
   - Sleeve
+  - Hair
   layers:
   - Default
   - TransparentFX
