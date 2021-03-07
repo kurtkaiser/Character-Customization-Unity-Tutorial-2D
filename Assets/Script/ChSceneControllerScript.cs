@@ -13,12 +13,16 @@ public class ChSceneControllerScript : MonoBehaviour
     public GameObject bodyPartBtn;
     public Button leftArrowBtn;
     public Button rightArrowBtn;
+    public Toggle sleevesToggle;
+    public Toggle hatToggle;
 
     // Script variables
     public PlayerScript playerScript;
     private string[] bodyPartNames;
     private int partIndex = 0;
     private GameObject[] skinBodyParts;
+
+
 
     void Start()
     {
@@ -29,7 +33,12 @@ public class ChSceneControllerScript : MonoBehaviour
         leftArrowBtn.onClick.AddListener(() => ArrowClicked(1));
         rightArrowBtn.onClick.AddListener(() => ArrowClicked(-1));
         bodyPartBtn.GetComponent<Button>().onClick.AddListener(() => ChangeBodyPartClicked());
-        
+        sleevesToggle.onValueChanged.AddListener(delegate {
+            ToggleSleeves(sleevesToggle);
+        });
+        hatToggle.onValueChanged.AddListener(delegate {
+            ToggleHat(hatToggle);
+        });
         ArrowClicked(0);
     }
 
@@ -44,6 +53,11 @@ public class ChSceneControllerScript : MonoBehaviour
         }
         MatchSprites("Leg");
         MatchSprites("Foot");
+        String strSprit = GameObject.Find("Shirt").GetComponent<SpriteRenderer>().sprite.name;
+        bool sleevesOn = UnityEngine.Random.Range(0, 4) > 0;
+        if (sleevesOn && strSprit == "Abs" || strSprit == "ChestFemale") sleevesOn = false;
+        ShowSleeves(sleevesOn);
+        sleevesToggle.isOn = sleevesOn;
     }
 
     void MatchSprites(string tagName)
@@ -53,11 +67,6 @@ public class ChSceneControllerScript : MonoBehaviour
         sameItem[1].GetComponent<BodyPartScript>().UpdateSprite(index);
     }
 
-    void BodyButtonClicked()
-    {
-        Debug.Log(playerScript.bodyParts[0].gameObject.name);
-    }
-
     void ArrowClicked(int num)
     {
         partIndex += num;
@@ -65,6 +74,17 @@ public class ChSceneControllerScript : MonoBehaviour
             partIndex = 0; 
         } else if (partIndex < 0){
             partIndex = bodyPartNames.Length - 1;
+        }
+        if (!sleevesToggle.isOn) {
+            if (bodyPartNames[partIndex] == "Left Sleeve")
+            {
+                partIndex += 2;
+            }
+            else if (bodyPartNames[partIndex] == "Right Sleeve")
+            {
+                partIndex -= 2;
+            }
+
         }
         bodyPartBtn.transform.GetChild(0).gameObject.GetComponent<Text>().text = bodyPartNames[partIndex];
         if (playerScript.bodyParts[partIndex].CompareTag("Skin"))
@@ -99,7 +119,7 @@ public class ChSceneControllerScript : MonoBehaviour
         {
             MatchSprites("Leg");
             MatchSprites("Foot");
-        }
+        } 
     }
 
     public void ChangeCurrentPartColor(Color32 newColor)
@@ -116,6 +136,35 @@ public class ChSceneControllerScript : MonoBehaviour
         {
             playerScript.bodyParts[partIndex].UpdateSpriteColor(newColor);
         }
+    }
+
+    private void ToggleSleeves(Toggle change)
+    {
+
+        ShowSleeves(change.isOn);
+
+    }
+
+    private void ToggleHat(Toggle change)
+    {
+        GameObject.Find("Hat").GetComponent<SpriteRenderer>().enabled = change.isOn;
+    }
+
+    private void ShowSleeves(bool showSleeve)
+    {
+        GameObject[] sleeves = GameObject.FindGameObjectsWithTag("Sleeve");
+        Color newColor = Color.white;
+        if (showSleeve)
+        {
+            newColor = GameObject.Find("Shirt").GetComponent<SpriteRenderer>().color;
+
+        }
+        else
+        {
+            newColor = GameObject.Find("Head").GetComponent<SpriteRenderer>().color;
+        }
+        sleeves[0].GetComponent<SpriteRenderer>().color = newColor;
+        sleeves[1].GetComponent<SpriteRenderer>().color = newColor;
     }
 
 }

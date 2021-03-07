@@ -106,7 +106,6 @@ public class ColorControllerScript : MonoBehaviour
     public void ChangeButtonColors(String[] colors)
     {
         int i = 0;
-        Debug.Log(colors[0]);
         foreach (Button btn in colorButtons)
         {
             ColorUtility.TryParseHtmlString(colors[i++], out Color color);
