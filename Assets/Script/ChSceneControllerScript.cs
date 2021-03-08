@@ -33,7 +33,8 @@ public class ChSceneControllerScript : MonoBehaviour
         leftArrowBtn.onClick.AddListener(() => ArrowClicked(1));
         rightArrowBtn.onClick.AddListener(() => ArrowClicked(-1));
         bodyPartBtn.GetComponent<Button>().onClick.AddListener(() => ChangeBodyPartClicked());
-        sleevesToggle.onValueChanged.AddListener(delegate {
+        sleevesToggle.onValueChanged.AddListener(delegate
+        {
             ToggleSleeves(sleevesToggle);
         });
         ArrowClicked(0);
@@ -67,12 +68,16 @@ public class ChSceneControllerScript : MonoBehaviour
     void ArrowClicked(int num)
     {
         partIndex += num;
-        if (partIndex > bodyPartNames.Length - 1) {
-            partIndex = 0; 
-        } else if (partIndex < 0){
+        if (partIndex > bodyPartNames.Length - 1)
+        {
+            partIndex = 0;
+        }
+        else if (partIndex < 0)
+        {
             partIndex = bodyPartNames.Length - 1;
         }
-        if (!sleevesToggle.isOn) {
+        if (!sleevesToggle.isOn)
+        {
             if (bodyPartNames[partIndex] == "Left Sleeve")
             {
                 partIndex += 2;
@@ -87,10 +92,12 @@ public class ChSceneControllerScript : MonoBehaviour
         if (playerScript.bodyParts[partIndex].CompareTag("Skin"))
         {
             colorController.ChangeButtonColors(colorController.GetHexSkinColors());
-        } else if (playerScript.bodyParts[partIndex].CompareTag("Hair"))
+        }
+        else if (playerScript.bodyParts[partIndex].CompareTag("Hair"))
         {
             colorController.ChangeButtonColors(colorController.GetHexHairColors());
-        } else
+        }
+        else
         {
             colorController.ChangeButtonColors(colorController.GetHexDefaultColors());
         }
@@ -100,7 +107,7 @@ public class ChSceneControllerScript : MonoBehaviour
     {
         int i = 0;
         string[] allNames = new string[playerScript.bodyParts.Length];
-        foreach(BodyPartScript partScript in playerScript.bodyParts)
+        foreach (BodyPartScript partScript in playerScript.bodyParts)
         {
             allNames[i] = partScript.gameObject.name;
             i++;
@@ -116,7 +123,7 @@ public class ChSceneControllerScript : MonoBehaviour
         {
             MatchSprites("Leg");
             MatchSprites("Foot");
-        } 
+        }
     }
 
     public void ChangeCurrentPartColor(Color32 newColor)
@@ -164,4 +171,8 @@ public class ChSceneControllerScript : MonoBehaviour
         sleeves[1].GetComponent<SpriteRenderer>().color = newColor;
     }
 
+    private void StartClicked()
+    {
+
+    }
 }
