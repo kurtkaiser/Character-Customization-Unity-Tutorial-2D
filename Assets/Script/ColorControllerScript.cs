@@ -31,6 +31,18 @@ public class ColorControllerScript : MonoBehaviour
          "#634933", "#5A3825",  "#3D2314", "#500a09", "#201123",
         "#23120B", "#010203", "#8d827a", "#505050", "#F3EBE1"};
 
+    private String[] HexSkinColors =
+        { "#fbe7a1", "#f1c27d", "#CAA667", "#d9b380", "#CC9966",
+        "#AF6E51", "#652A0E", "#c68642", "#634933",  "#5A3825",
+        "#8d5524", "#3D2314", "#23120B" , "#656d43", "#6B676F"
+    };
+
+    private String[] HexDefaultColors =
+       { "#1b85b8", "#1c222e", "#2e4045", "#41533b", "#312528",
+        "#554840", "#559e83", "#5a5255",  "#604439", "#654321",
+        "#83adb5", "#9e9a75", "#ae5a41", "#c3cb71", "#c7bbc9"
+    };
+
     private void Start()
     {
         red.slider.value = (float)UnityEngine.Random.Range(0, 255);
@@ -44,7 +56,7 @@ public class ColorControllerScript : MonoBehaviour
         green.slider.onValueChanged.AddListener(delegate { GreenChange(); });
         blue.slider.onValueChanged.AddListener(delegate { BlueChange(); });
 
-        ChangeButtonColors(HexHairColors);
+        ChangeButtonColors(HexDefaultColors);
     }
 
     void RedChange()
@@ -89,7 +101,7 @@ public class ColorControllerScript : MonoBehaviour
         charSceneScript.ChangeCurrentPartColor(newColor);
     }
 
-    private void ChangeButtonColors(String[] colors)
+    public void ChangeButtonColors(String[] colors)
     {
         int i = 0;
         foreach(Button btn in colorButtons)
@@ -97,5 +109,21 @@ public class ColorControllerScript : MonoBehaviour
             ColorUtility.TryParseHtmlString(colors[i++], out Color color);
             btn.image.color = color;
         }
+    }
+
+    public String[] GetHexHairColors()
+    {
+        return HexHairColors;
+    }
+
+    public String[] GetHexSkinColors()
+    {
+        return HexSkinColors;
+    }
+
+
+    public String[] GetHexDefaultColors()
+    {
+        return HexDefaultColors;
     }
 }

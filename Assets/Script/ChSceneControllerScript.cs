@@ -12,6 +12,8 @@ public class ChSceneControllerScript : MonoBehaviour
     public GameObject bodyPartBtn;
     public Button leftArrowBtn;
     public Button rightArrowBtn;
+    public Toggle sleevesToggle;
+    public ColorControllerScript colorScript;
 
     // Script variables
     public PlayerScript playerScript;
@@ -25,6 +27,11 @@ public class ChSceneControllerScript : MonoBehaviour
         randomBtn.onClick.AddListener(() => RandomPlayerSprites());
         leftArrowBtn.onClick.AddListener(() => ArrowClicked(1));
         rightArrowBtn.onClick.AddListener(() => ArrowClicked(-1));
+        sleevesToggle.onValueChanged.AddListener(delegate
+        {
+            ToggleSleevesClicked(sleevesToggle);
+        });
+
         bodyPartBtn.GetComponent<Button>().onClick.AddListener(() => ChangeBodyPartClicked());
         
         ArrowClicked(0);
@@ -38,9 +45,17 @@ public class ChSceneControllerScript : MonoBehaviour
         {
             rndSpriteIndex = UnityEngine.Random.Range(0, playerScript.bodyParts[i].GetSpritesLength());
             playerScript.bodyParts[i].UpdateSprite(rndSpriteIndex);
+
         }
         MatchSprites("Leg");
         MatchSprites("Foot");
+        if(GameObject.Find("Shirt").GetComponent<BodyPartScript>().GetSpriteIndex() > 2)
+        {
+            ShowSleeves(false);
+        } else
+        {
+            ShowSleeves(true);
+        }
     }
 
     void MatchSprites(string tagName)
@@ -64,6 +79,21 @@ public class ChSceneControllerScript : MonoBehaviour
             partIndex = bodyPartNames.Length - 1;
         }
         bodyPartBtn.transform.GetChild(0).gameObject.GetComponent<Text>().text = bodyPartNames[partIndex];
+        CheckColorButtonOptions();
+    }
+
+    void CheckColorButtonOptions()
+    {
+        if (playerScript.bodyParts[partIndex].CompareTag("Skin"))
+        {
+            colorScript.ChangeButtonColors(colorScript.GetHexSkinColors());
+        } else if (playerScript.bodyParts[partIndex].CompareTag("Hair"))
+        {
+            colorScript.ChangeButtonColors(colorScript.GetHexHairColors());
+        } else
+        {
+            colorScript.ChangeButtonColors(colorScript.GetHexDefaultColors());
+        }
     }
 
     private string[] GetPlayerBodyPartNames()
@@ -81,16 +111,53 @@ public class ChSceneControllerScript : MonoBehaviour
     private void ChangeBodyPartClicked()
     {
         playerScript.bodyParts[partIndex].UpdateToNextSprite();
-        string partTag = playerScript.gameObject.tag;
+        string partTag = playerScript.bodyParts[partIndex].tag;
         if (partTag == "Leg" || partTag == "Foot")
         {
             MatchSprites("Leg");
             MatchSprites("Foot");
+        } else if(partTag == "Shirt")
+        {
+            if (playerScript.bodyParts[partIndex].GetSpriteIndex() > 2)
+            {
+                ShowSleeves(false);
+            } else
+            {
+                ShowSleeves(true);
+            }
+
         }
     }
 
     public void ChangeCurrentPartColor(Color32 newColor)
     {
-        playerScript.bodyParts[partIndex].UpdateSpriteColor(newColor);
+        if (playerScript.bodyParts[partIndex].CompareTag("Skin"))
+        {
+            GameObject[] skins = GameObject.FindGameObjectsWithTag("Skin");
+            foreach(GameObject skin in skins)
+            {
+                skin.GetComponent<BodyPartScript>().UpdateSpriteColor(newColor);
+            }
+        } else
+        {
+            playerScript.bodyParts[partIndex].UpdateSpriteColor(newColor);
+        }
+    }
+
+    public void ToggleSleevesClicked(Toggle change)
+    {
+        ShowSleeves(change.isOn);
+    }
+
+    private void ShowSleeves(bool shirtOn)
+    {
+        GameObject[] sleeves = GameObject.FindGameObjectsWithTag("Sleeve");
+        Color newColor = GameObject.Find("Head").GetComponent<SpriteRenderer>().color;
+        if (shirtOn)
+        {
+            newColor = GameObject.Find("Shirt").GetComponent<SpriteRenderer>().color;
+        }
+        sleeves[0].GetComponent<SpriteRenderer>().color = newColor;
+        sleeves[1].GetComponent<SpriteRenderer>().color = newColor;
     }
 }
