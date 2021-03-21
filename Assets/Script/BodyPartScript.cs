@@ -20,7 +20,6 @@ public class BodyPartScript : MonoBehaviour
     public Sprites[] sprites;
     int index = 0;
 
-
     public void UpdateSprite(int newIndex)
     {
         index = newIndex;
@@ -46,5 +45,27 @@ public class BodyPartScript : MonoBehaviour
     public void UpdateSpriteColor(Color32 newColor)
     {
         gameObject.GetComponent<SpriteRenderer>().color = newColor;
+    }
+
+    public void SpriteDirectionChange(string dir)
+    {
+        if (dir == "down")
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].down;
+        } else if (dir == "left")
+        {
+            MirrorSprite(false);
+            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
+        } else if (dir == "right")
+        {
+            MirrorSprite(true);
+            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
+        }
+    }
+
+    private void MirrorSprite(bool mirror)
+    {
+        gameObject.GetComponent<SpriteRenderer>().flipX = mirror;
+
     }
 }

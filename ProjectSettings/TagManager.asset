@@ -56,6 +56,9 @@ TagManager:
   - name: Shoes
     uniqueID: 2042843253
     locked: 0
+  - name: RightLeg
+    uniqueID: 382549487
+    locked: 0
   - name: Body
     uniqueID: 1217980805
     locked: 0
