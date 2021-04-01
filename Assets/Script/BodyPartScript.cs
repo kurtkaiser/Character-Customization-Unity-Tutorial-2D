@@ -20,11 +20,15 @@ public class BodyPartScript : MonoBehaviour
     public Sprites[] sprites;
     int index = 0;
 
+    private void Start()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
+    }
 
     public void UpdateSprite(int newIndex)
     {
         index = newIndex;
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].down;
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
     }
 
     public int GetSpritesLength()
