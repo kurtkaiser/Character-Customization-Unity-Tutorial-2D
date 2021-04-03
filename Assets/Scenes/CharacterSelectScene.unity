@@ -1096,13 +1096,13 @@ MonoBehaviour:
   sprites:
   - name: Default
     down: {fileID: 21300000, guid: c5069386bc9d2184188a10e51622a3d5, type: 3}
-    left: {fileID: 21300000, guid: c5069386bc9d2184188a10e51622a3d5, type: 3}
+    left: {fileID: 21300000, guid: 20d65cbce1bdbdb41bef699ac07d313b, type: 3}
   - name: Pockets
     down: {fileID: 21300000, guid: d8c872fb735b3624d8b75642ba7df09f, type: 3}
     left: {fileID: 21300000, guid: cdd842d58fbe33a4db30cfc1aba2b12f, type: 3}
   - name: Striped
     down: {fileID: 21300000, guid: 618fc29c9111c4241a4df43e000011c6, type: 3}
-    left: {fileID: 21300000, guid: c5069386bc9d2184188a10e51622a3d5, type: 3}
+    left: {fileID: 21300000, guid: 618fc29c9111c4241a4df43e000011c6, type: 3}
 --- !u!1 &373279245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,7 +2267,7 @@ MonoBehaviour:
   sprites:
   - name: Default
     down: {fileID: 21300000, guid: f78385c491199b948974d0f2c13db2e6, type: 3}
-    left: {fileID: 21300000, guid: 9657c704d0639a844a2bb85cd4a423a5, type: 3}
+    left: {fileID: 21300000, guid: 33627a9c872a0cc4288986663628257c, type: 3}
   - name: Caesar
     down: {fileID: 21300000, guid: 8cdc9c686baece34e9e03854b86b4800, type: 3}
     left: {fileID: 21300000, guid: ad25fc2b9dc3df64e9ae91ac560aefca, type: 3}
@@ -3058,13 +3058,13 @@ MonoBehaviour:
   sprites:
   - name: Default
     down: {fileID: 21300000, guid: 4a311450bfcd3a4409f20a7ae0a40118, type: 3}
-    left: {fileID: 21300000, guid: c5069386bc9d2184188a10e51622a3d5, type: 3}
+    left: {fileID: 21300000, guid: 33ed7fb0d043ec940b7a5870722fa0e5, type: 3}
   - name: Pockets
     down: {fileID: 21300000, guid: f9476637153c5a44da6edd68dd0ea703, type: 3}
-    left: {fileID: 21300000, guid: c5069386bc9d2184188a10e51622a3d5, type: 3}
+    left: {fileID: 21300000, guid: 33ed7fb0d043ec940b7a5870722fa0e5, type: 3}
   - name: Striped
     down: {fileID: 21300000, guid: 729927a5d33867a40b8467ccd9e6065b, type: 3}
-    left: {fileID: 21300000, guid: 618fc29c9111c4241a4df43e000011c6, type: 3}
+    left: {fileID: 21300000, guid: 729927a5d33867a40b8467ccd9e6065b, type: 3}
 --- !u!1 &912758472
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,7 +4686,7 @@ MonoBehaviour:
   sprites:
   - name: Default
     down: {fileID: 21300000, guid: c72f3256105f36e428f28c6857c9c158, type: 3}
-    left: {fileID: 21300000, guid: b956b83c4849d3b4a859b8bf894bf6e0, type: 3}
+    left: {fileID: 21300000, guid: 3beaab7c890a3da4fbfef573519d4e3a, type: 3}
   - name: Wizard
     down: {fileID: 21300000, guid: ef00c0431e66e664981ac79b650a1510, type: 3}
     left: {fileID: 21300000, guid: b647313e4d1a02e44ac01b69d3c71ae0, type: 3}
