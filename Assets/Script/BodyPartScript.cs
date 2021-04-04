@@ -22,13 +22,13 @@ public class BodyPartScript : MonoBehaviour
 
     private void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].down;
     }
 
     public void UpdateSprite(int newIndex)
     {
         index = newIndex;
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].down;
     }
 
     public int GetSpritesLength()
@@ -50,5 +50,17 @@ public class BodyPartScript : MonoBehaviour
     public void UpdateSpriteColor(Color32 newColor)
     {
         gameObject.GetComponent<SpriteRenderer>().color = newColor;
+    }
+
+    public void ChangeSpriteDirection(string dir)
+    {
+        if(dir == "WalkDownKey")
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].down;
+        }
+        else if (dir == "WalkLeftKey")
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
+        }
     }
 }

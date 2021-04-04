@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChSceneControllerScript : MonoBehaviour
@@ -9,6 +10,7 @@ public class ChSceneControllerScript : MonoBehaviour
 
     // Scene UI
     public Button randomBtn;
+    public Button submitBtn;
     public GameObject bodyPartBtn;
     public Button leftArrowBtn;
     public Button rightArrowBtn;
@@ -25,6 +27,8 @@ public class ChSceneControllerScript : MonoBehaviour
         bodyPartNames = GetPlayerBodyPartNames();
 
         randomBtn.onClick.AddListener(() => RandomPlayerSprites());
+        submitBtn.onClick.AddListener(() => SubmitClickedLoadNextScene());
+
         leftArrowBtn.onClick.AddListener(() => ArrowClicked(1));
         rightArrowBtn.onClick.AddListener(() => ArrowClicked(-1));
         sleevesToggle.onValueChanged.AddListener(delegate
@@ -200,5 +204,11 @@ public class ChSceneControllerScript : MonoBehaviour
         }
         sleeves[0].GetComponent<SpriteRenderer>().color = newColor;
         sleeves[1].GetComponent<SpriteRenderer>().color = newColor;
+    }
+
+    private void SubmitClickedLoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        playerScript.ChangePlayerScale(0.3f);
     }
 }
