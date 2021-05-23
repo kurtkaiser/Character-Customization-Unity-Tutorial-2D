@@ -58,15 +58,28 @@ public class BodyPartScript : MonoBehaviour
         if(dir == "WalkDownKey")
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].down;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         else if (dir == "WalkLeftKey")
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (dir == "WalkRightKey")
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else if (dir == "WalkUpKey")
         {
             if(sprites[index].up != null)
+            {
                 gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].up;
+            } else
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].down;
+            }                
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 }
