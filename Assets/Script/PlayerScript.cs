@@ -40,7 +40,6 @@ public class PlayerScript : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         rb.MovePosition(rb.position + (movement * moveSpeed * Time.fixedDeltaTime));
-
     }
 
     private void FixedUpdate()
@@ -55,15 +54,15 @@ public class PlayerScript : MonoBehaviour
         }
         if (isUpPressed)
         {
-           // PlayAnimation("WalkRightKey");
+           PlayAnimation("WalkUpKey");
         }
         if (isDownPressed)
         {
             PlayAnimation("WalkDownKey");
         }
-        if(!isRightPressed || isLeftPressed || isUpPressed || isDownPressed)
+        if(!(isRightPressed || isLeftPressed || isUpPressed || isDownPressed))
         {
-            Invoke("PlayIdle", 0.15f);
+            Invoke("PlayIdle", 0.25f);
         }
     }
 
@@ -79,9 +78,12 @@ public class PlayerScript : MonoBehaviour
 
     private void PlayIdle()
     {
-        animator.Play("Idle");
+        if (!(isRightPressed || isLeftPressed || isUpPressed || isDownPressed))
+        {
+            animator.Play("Idle");
+            UpdateBodySpritesDirection("WalkDownKey");
+        }
     }
-
 
     void ChangeBodyPartSprite(int partIndex, int spriteIndex)
     {
@@ -99,11 +101,14 @@ public class PlayerScript : MonoBehaviour
 
     private void UpdateBodySpritesDirection(string dir)
     {
-        foreach(BodyPartScript partScript in bodyParts)
-        {
-            partScript.ChangeSpriteDirection(dir);
-        }
-        foreach (BodyPartScript partScript in notCustomBodyParts)
+        Debug.Log("dir: " + dir);
+        LoopAndUpdateSprites(bodyParts, dir);
+        LoopAndUpdateSprites(notCustomBodyParts, dir);
+    }
+
+    private void LoopAndUpdateSprites(BodyPartScript[] partsArray, string dir)
+    {
+        foreach (BodyPartScript partScript in partsArray)
         {
             partScript.ChangeSpriteDirection(dir);
         }

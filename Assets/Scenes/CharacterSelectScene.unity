@@ -473,12 +473,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 282f57830824a054d88f606c1be5d762, type: 3}
     left: {fileID: 21300000, guid: 0322a647fcb35844b8b89a467fec609d, type: 3}
+    up: {fileID: 21300000, guid: 49ccfc9c0b74e4248922441a64adb556, type: 3}
   - name: Fur
     down: {fileID: 21300000, guid: c74a81e541753054ca3e93016ef883d0, type: 3}
     left: {fileID: 21300000, guid: 27b0ab3c2769ef6428c08cc848df0dec, type: 3}
+    up: {fileID: 0}
   - name: Rope
     down: {fileID: 21300000, guid: f3305bc6d64162f45a7642a6a26c27f0, type: 3}
     left: {fileID: 21300000, guid: 1fe0c91d149ecb947a8dae13b9ef3449, type: 3}
+    up: {fileID: 0}
 --- !u!1 &144679885
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +514,6 @@ Transform:
   m_Children:
   - {fileID: 937681168}
   - {fileID: 1971572183}
-  - {fileID: 1632577033}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -688,12 +690,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 2105b514ff5ea8441b16fe5de9ca4788, type: 3}
     left: {fileID: 21300000, guid: ac3aee2660e01804082c6e03a6bc7543, type: 3}
+    up: {fileID: 0}
   - name: Earings
     down: {fileID: 21300000, guid: 3b52dd484c2f81c47948fb09a7dc9f21, type: 3}
     left: {fileID: 21300000, guid: 2023cddcbb227e642baf97a15daf0207, type: 3}
+    up: {fileID: 0}
   - name: Elf
     down: {fileID: 21300000, guid: 7570778a4253d104c94b3686ffaf62da, type: 3}
     left: {fileID: 21300000, guid: 90bf698dd66b12e45b386d8ba392c96b, type: 3}
+    up: {fileID: 0}
 --- !u!1 &200992090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,12 +1130,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: c5069386bc9d2184188a10e51622a3d5, type: 3}
     left: {fileID: 21300000, guid: 20d65cbce1bdbdb41bef699ac07d313b, type: 3}
+    up: {fileID: 0}
   - name: Pockets
     down: {fileID: 21300000, guid: d8c872fb735b3624d8b75642ba7df09f, type: 3}
     left: {fileID: 21300000, guid: cdd842d58fbe33a4db30cfc1aba2b12f, type: 3}
+    up: {fileID: 0}
   - name: Striped
     down: {fileID: 21300000, guid: 618fc29c9111c4241a4df43e000011c6, type: 3}
     left: {fileID: 21300000, guid: 618fc29c9111c4241a4df43e000011c6, type: 3}
+    up: {fileID: 0}
 --- !u!1 &373279245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,6 +1523,7 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: c27455a3d676cc54fadb68ed98f0afed, type: 3}
     left: {fileID: 21300000, guid: 60849d83e959cc14cb5ba95d229a6675, type: 3}
+    up: {fileID: 0}
 --- !u!1 &516118111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,18 +2306,23 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: f78385c491199b948974d0f2c13db2e6, type: 3}
     left: {fileID: 21300000, guid: 33627a9c872a0cc4288986663628257c, type: 3}
+    up: {fileID: 21300000, guid: a6f3bd27dca3200428ddf2def10629fa, type: 3}
   - name: Caesar
     down: {fileID: 21300000, guid: 8cdc9c686baece34e9e03854b86b4800, type: 3}
     left: {fileID: 21300000, guid: ad25fc2b9dc3df64e9ae91ac560aefca, type: 3}
+    up: {fileID: 21300000, guid: c3185b3744c3c0d42a1a82000f1ae644, type: 3}
   - name: Long
     down: {fileID: 21300000, guid: e576343e8ed3a9941b5d0611453620f8, type: 3}
     left: {fileID: 21300000, guid: 28d045869a0935f498bbdd4eb3a6cf14, type: 3}
+    up: {fileID: 21300000, guid: 321ee2f6895c6e5459fb967e1f3515c2, type: 3}
   - name: Bald
     down: {fileID: 21300000, guid: 1b40757372901724b8926fe27de6b5d4, type: 3}
     left: {fileID: 21300000, guid: 497f5fe2a17091646b7a74f4ae3377c9, type: 3}
+    up: {fileID: 21300000, guid: d8030d9b6b1f355459e91708797cf931, type: 3}
   - name: Bun
     down: {fileID: 21300000, guid: 25c7150163d5a0f4bb637e108c72347c, type: 3}
     left: {fileID: 21300000, guid: af29cc84938edd247b1acd739ab2bd58, type: 3}
+    up: {fileID: 21300000, guid: e2aab65241e38ec40ac935ed63d5f591, type: 3}
 --- !u!1 &700407412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,12 +2833,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 0f7b26ca6be5da249b322f5e73e22263, type: 3}
     left: {fileID: 21300000, guid: b5e260f92b1d8a549bb3162c4b9b03c7, type: 3}
+    up: {fileID: 0}
   - name: Cat
     down: {fileID: 21300000, guid: 0f7b26ca6be5da249b322f5e73e22263, type: 3}
     left: {fileID: 21300000, guid: b5e260f92b1d8a549bb3162c4b9b03c7, type: 3}
+    up: {fileID: 0}
   - name: Large
     down: {fileID: 21300000, guid: 0f7b26ca6be5da249b322f5e73e22263, type: 3}
     left: {fileID: 21300000, guid: b5e260f92b1d8a549bb3162c4b9b03c7, type: 3}
+    up: {fileID: 0}
 --- !u!1 &866656702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2956,6 +2973,7 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: f4490d884bccb624c9c9108e53806043, type: 3}
     left: {fileID: 21300000, guid: 99e15e051bb97bb4bae5d8a9b7273fd1, type: 3}
+    up: {fileID: 0}
 --- !u!1 &881220593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,7 +3038,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 948672090}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &896568459
 SpriteRenderer:
@@ -3089,12 +3107,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 4a311450bfcd3a4409f20a7ae0a40118, type: 3}
     left: {fileID: 21300000, guid: 33ed7fb0d043ec940b7a5870722fa0e5, type: 3}
+    up: {fileID: 0}
   - name: Pockets
     down: {fileID: 21300000, guid: f9476637153c5a44da6edd68dd0ea703, type: 3}
     left: {fileID: 21300000, guid: 33ed7fb0d043ec940b7a5870722fa0e5, type: 3}
+    up: {fileID: 0}
   - name: Striped
     down: {fileID: 21300000, guid: 729927a5d33867a40b8467ccd9e6065b, type: 3}
     left: {fileID: 21300000, guid: 729927a5d33867a40b8467ccd9e6065b, type: 3}
+    up: {fileID: 0}
 --- !u!1 &912758472
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,8 +3255,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1975869869}
   - {fileID: 896568458}
+  - {fileID: 1975869869}
   m_Father: {fileID: 1632577033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3338,18 +3359,23 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 2d901a5b79e3da14f8f3444c331bed84, type: 3}
     left: {fileID: 21300000, guid: dda75de7b475fd14fbfaa57191ec2093, type: 3}
+    up: {fileID: 21300000, guid: b432679ddc81102498cb0ee9a9bb60dc, type: 3}
   - name: VNeck
     down: {fileID: 21300000, guid: b70fff33f0313c6419ff27ac85776589, type: 3}
     left: {fileID: 21300000, guid: b738829ea419bff458e53df0c2b4eea7, type: 3}
+    up: {fileID: 21300000, guid: b432679ddc81102498cb0ee9a9bb60dc, type: 3}
   - name: Belly
     down: {fileID: 21300000, guid: 1373163124fc2b244af3030268a57bd7, type: 3}
     left: {fileID: 21300000, guid: 8c68080bafa396843bdbd754e01193cd, type: 3}
+    up: {fileID: 21300000, guid: cd527cb5adc0f42458a0c97ab48c0c44, type: 3}
   - name: Abs
     down: {fileID: 21300000, guid: cdb36c151e4950c4e9f189e59aa2d580, type: 3}
     left: {fileID: 21300000, guid: 5e8234fc802416b48b82ef002aafcc86, type: 3}
+    up: {fileID: 21300000, guid: 60849d83e959cc14cb5ba95d229a6675, type: 3}
   - name: FemaleChest
     down: {fileID: 21300000, guid: 8c938ce8548bf554a8786316d2a03e10, type: 3}
     left: {fileID: 21300000, guid: 6e8e2be0d3f0d34419b08aafb46ca0d5, type: 3}
+    up: {fileID: 21300000, guid: 1184e6bfeed15854a9375073a7e3b2bc, type: 3}
 --- !u!1 &1020977187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,6 +3991,7 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: b432679ddc81102498cb0ee9a9bb60dc, type: 3}
     left: {fileID: 21300000, guid: 0ae3a379879b7064ab4c4b80a6959544, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1100768044
 GameObject:
   m_ObjectHideFlags: 0
@@ -4492,9 +4519,11 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: b9ddf6a016a70ec4c960fc3ac37e05e9, type: 3}
     left: {fileID: 21300000, guid: f31bb421d27a1c241abcba02ead64f4c, type: 3}
+    up: {fileID: 21300000, guid: 4e86dd19ef65cfe4b99c1b0b6f4bc9cf, type: 3}
   - name: Boot
     down: {fileID: 21300000, guid: 84c7ab15ca975e34598d045aeb407732, type: 3}
     left: {fileID: 21300000, guid: cc0adbbf04eeeb646a8bf0a480743f94, type: 3}
+    up: {fileID: 21300000, guid: 7bda7ba036adc8c4f9670a9b315d80b9, type: 3}
 --- !u!1 &1278322578
 GameObject:
   m_ObjectHideFlags: 0
@@ -4916,15 +4945,19 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: c72f3256105f36e428f28c6857c9c158, type: 3}
     left: {fileID: 21300000, guid: 3beaab7c890a3da4fbfef573519d4e3a, type: 3}
+    up: {fileID: 0}
   - name: Wizard
     down: {fileID: 21300000, guid: ef00c0431e66e664981ac79b650a1510, type: 3}
     left: {fileID: 21300000, guid: b647313e4d1a02e44ac01b69d3c71ae0, type: 3}
+    up: {fileID: 0}
   - name: Headband
     down: {fileID: 21300000, guid: 071dfd84ac6e6bc4fbf35b32d87fdbcf, type: 3}
     left: {fileID: 21300000, guid: 08bdfad556e97244cabb86a4eb67c603, type: 3}
+    up: {fileID: 0}
   - name: NoHat
     down: {fileID: 21300000, guid: 60849d83e959cc14cb5ba95d229a6675, type: 3}
     left: {fileID: 21300000, guid: 60849d83e959cc14cb5ba95d229a6675, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1306469633
 GameObject:
   m_ObjectHideFlags: 0
@@ -5156,12 +5189,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 77b3dfb7bf7531a4db1e48c98f53c354, type: 3}
     left: {fileID: 21300000, guid: b42d16a56ee0a20479317a845ea240f9, type: 3}
+    up: {fileID: 0}
   - name: Cat
     down: {fileID: 21300000, guid: 77b3dfb7bf7531a4db1e48c98f53c354, type: 3}
     left: {fileID: 21300000, guid: b42d16a56ee0a20479317a845ea240f9, type: 3}
+    up: {fileID: 0}
   - name: Large
     down: {fileID: 21300000, guid: 77b3dfb7bf7531a4db1e48c98f53c354, type: 3}
     left: {fileID: 21300000, guid: b42d16a56ee0a20479317a845ea240f9, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1402509088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,13 +5689,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632577032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25741377, y: -0.406961, z: -1.8285165}
+  m_LocalPosition: {x: -0.25741386, y: -0.406961, z: -1.8285165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 948672090}
   - {fileID: 268287621}
-  m_Father: {fileID: 144679886}
-  m_RootOrder: 2
+  m_Father: {fileID: 1971572183}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659214825
 GameObject:
@@ -5892,12 +5928,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 62dacc6e27e824143b32dae958c7ef8b, type: 3}
     left: {fileID: 21300000, guid: 8a5d61954508387498a6f26d5bbc9f12, type: 3}
+    up: {fileID: 0}
   - name: Pointed
     down: {fileID: 21300000, guid: b28b9d71bf56bc64d8c244563b5a7a03, type: 3}
     left: {fileID: 21300000, guid: 2e266f9d008dd564b9de2c32297aac4f, type: 3}
+    up: {fileID: 0}
   - name: Rounded
     down: {fileID: 21300000, guid: 842dac763f3488c4798a1832883c3c76, type: 3}
     left: {fileID: 21300000, guid: 9488ca026618a24438e4d2fe93a0999a, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1677915922
 GameObject:
   m_ObjectHideFlags: 0
@@ -6152,12 +6191,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 5330341ab89eced4da84777b8195589b, type: 3}
     left: {fileID: 21300000, guid: 8d3e043ffb42f41489cd4e2e230aa7e7, type: 3}
+    up: {fileID: 0}
   - name: Cat
     down: {fileID: 21300000, guid: dcaebcb3fb4f5be40a184c0ad0f4f9bb, type: 3}
     left: {fileID: 21300000, guid: b43dbf442f84bf845b579bb74b3f4e9d, type: 3}
+    up: {fileID: 0}
   - name: Large
     down: {fileID: 21300000, guid: 8ab5dda22d56b1a4f807db2f65222ee8, type: 3}
     left: {fileID: 21300000, guid: a99f5c8415c975c42b3c5e650fb672b8, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1694487677
 GameObject:
   m_ObjectHideFlags: 0
@@ -6407,15 +6449,19 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: eb9c0586b878d534fabbb26b89439b30, type: 3}
     left: {fileID: 21300000, guid: 25178594704ff3c40a90d672d062ab5e, type: 3}
+    up: {fileID: 0}
   - name: Frown
     down: {fileID: 21300000, guid: 101b1643c2630d742ba02dcc4186db04, type: 3}
     left: {fileID: 21300000, guid: 753de0cb862134b4da748c9ed4a72e91, type: 3}
+    up: {fileID: 0}
   - name: Teeth
     down: {fileID: 21300000, guid: a2698c108719800499b2cbc1691fb266, type: 3}
     left: {fileID: 21300000, guid: 05af1c116b6527c4fa55a59783f8313e, type: 3}
+    up: {fileID: 0}
   - name: Lips
     down: {fileID: 21300000, guid: 501abaf8cd2b045418b7c474b42fe87d, type: 3}
     left: {fileID: 21300000, guid: 9868ee3641b5fcd4eb03c8ff3439e059, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1789539218
 GameObject:
   m_ObjectHideFlags: 0
@@ -6515,12 +6561,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 89fc27f11fb5cde4d955b6229d720fec, type: 3}
     left: {fileID: 21300000, guid: a1d3a2c9ea568e14d855b1e4318b5dd2, type: 3}
+    up: {fileID: 0}
   - name: Cat
     down: {fileID: 21300000, guid: 89fc27f11fb5cde4d955b6229d720fec, type: 3}
     left: {fileID: 21300000, guid: a1d3a2c9ea568e14d855b1e4318b5dd2, type: 3}
+    up: {fileID: 0}
   - name: Large
     down: {fileID: 21300000, guid: 89fc27f11fb5cde4d955b6229d720fec, type: 3}
     left: {fileID: 21300000, guid: a1d3a2c9ea568e14d855b1e4318b5dd2, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1824490834
 GameObject:
   m_ObjectHideFlags: 0
@@ -6620,6 +6669,7 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: c057d5c935fe0c445b17791e5f70a832, type: 3}
     left: {fileID: 21300000, guid: c0e69222b1d8622499edef48023f1c63, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1880910591
 GameObject:
   m_ObjectHideFlags: 0
@@ -6844,12 +6894,15 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 7a9ad36bbf9c3004f8cd722c88dbc413, type: 3}
     left: {fileID: 21300000, guid: d8af0235676b6554ea84e98ddd4e36b2, type: 3}
+    up: {fileID: 0}
   - name: Curved
     down: {fileID: 21300000, guid: d5ac3f9d87a006f428a2d51a0391b83e, type: 3}
     left: {fileID: 21300000, guid: ac3ff0dc08ccf0046a5ae5bf048e8ee2, type: 3}
+    up: {fileID: 0}
   - name: Evil
     down: {fileID: 21300000, guid: 97eb476cc4ae0e24c9ad8c1db9277f46, type: 3}
     left: {fileID: 21300000, guid: 698efa342f313114ab2fef8de61dd31c, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1919243381
 GameObject:
   m_ObjectHideFlags: 0
@@ -7024,6 +7077,7 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: d7bb7c0920f4bf44cbbd8c8a40b97dc1, type: 3}
     left: {fileID: 21300000, guid: 60849d83e959cc14cb5ba95d229a6675, type: 3}
+    up: {fileID: 0}
 --- !u!1 &1971572182
 GameObject:
   m_ObjectHideFlags: 0
@@ -7055,6 +7109,7 @@ Transform:
   - {fileID: 988606384}
   - {fileID: 108320465}
   - {fileID: 866656703}
+  - {fileID: 1632577033}
   m_Father: {fileID: 144679886}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7088,7 +7143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 948672090}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1975869870
 SpriteRenderer:
@@ -7157,9 +7212,11 @@ MonoBehaviour:
   - name: Default
     down: {fileID: 21300000, guid: 0fac64ad7485f874999bf6341d1c1dc1, type: 3}
     left: {fileID: 21300000, guid: 3b4c4e337ea744f42a2294a8ef79006e, type: 3}
+    up: {fileID: 21300000, guid: 8af8bc66e8dc54944b395a174f5f1138, type: 3}
   - name: Boot
     down: {fileID: 21300000, guid: b2aa9e9ab70d40149b4d21b467690923, type: 3}
     left: {fileID: 21300000, guid: 7351a2b732dc690429c1e22186125eca, type: 3}
+    up: {fileID: 21300000, guid: 9e5f46e7242eaf84782ddb697402293c, type: 3}
 --- !u!1 &1980905132
 GameObject:
   m_ObjectHideFlags: 0
