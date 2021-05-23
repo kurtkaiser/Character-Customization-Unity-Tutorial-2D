@@ -25,6 +25,8 @@ public class ChSceneControllerScript : MonoBehaviour
     void Start()
     {
         bodyPartNames = GetPlayerBodyPartNames();
+        
+        RandomPlayerSprites();
 
         randomBtn.onClick.AddListener(() => RandomPlayerSprites());
         submitBtn.onClick.AddListener(() => SubmitClickedLoadNextScene());

@@ -514,6 +514,7 @@ Transform:
   m_Children:
   - {fileID: 937681168}
   - {fileID: 1971572183}
+  - {fileID: 1632577033}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -602,6 +603,7 @@ GameObject:
   - component: {fileID: 187500392}
   - component: {fileID: 187500393}
   - component: {fileID: 187500394}
+  - component: {fileID: 187500395}
   m_Layer: 0
   m_Name: Ears
   m_TagString: Skin
@@ -699,6 +701,18 @@ MonoBehaviour:
     down: {fileID: 21300000, guid: 7570778a4253d104c94b3686ffaf62da, type: 3}
     left: {fileID: 21300000, guid: 90bf698dd66b12e45b386d8ba392c96b, type: 3}
     up: {fileID: 0}
+--- !u!114 &187500395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187500391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ba50718fa69be428a9408d997b9aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &200992090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,8 +1116,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -981233309
   m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c5069386bc9d2184188a10e51622a3d5, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 20d65cbce1bdbdb41bef699ac07d313b, type: 3}
   m_Color: {r: 0.1511659, g: 0.22519483, b: 0.745283, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4491,7 +4505,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2042843253
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b9ddf6a016a70ec4c960fc3ac37e05e9, type: 3}
   m_Color: {r: 0.8773585, g: 0.8531079, b: 0.19450872, a: 1}
   m_FlipX: 0
@@ -5694,8 +5708,8 @@ Transform:
   m_Children:
   - {fileID: 948672090}
   - {fileID: 268287621}
-  m_Father: {fileID: 1971572183}
-  m_RootOrder: 4
+  m_Father: {fileID: 144679886}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659214825
 GameObject:
@@ -7109,7 +7123,6 @@ Transform:
   - {fileID: 988606384}
   - {fileID: 108320465}
   - {fileID: 866656703}
-  - {fileID: 1632577033}
   m_Father: {fileID: 144679886}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
