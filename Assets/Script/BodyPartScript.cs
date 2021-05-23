@@ -15,6 +15,7 @@ public class BodyPartScript : MonoBehaviour
         public string name;
         public Sprite down; // down key sprite image
         public Sprite left; // left key animation
+        public Sprite up; // up key sprite
     }
 
     public Sprites[] sprites;
@@ -61,6 +62,11 @@ public class BodyPartScript : MonoBehaviour
         else if (dir == "WalkLeftKey")
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].left;
+        }
+        else if (dir == "WalkUpKey")
+        {
+            if(sprites[index].up != null)
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index].up;
         }
     }
 }

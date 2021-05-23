@@ -92,7 +92,6 @@ public class PlayerScript : MonoBehaviour
         
     }
 
-
     void ChangeBodyPartSprite(int partIndex, int spriteIndex)
     {
         if(spriteIndex < bodyParts[partIndex].sprites.Length - 1)
@@ -109,13 +108,16 @@ public class PlayerScript : MonoBehaviour
 
     private void UpdateBodySpritesDirection(string dir)
     {
-        foreach(BodyPartScript partScript in bodyParts)
+        LoopAndUpdateSprites(bodyParts, dir);
+        LoopAndUpdateSprites(notCustomBodyParts, dir);
+    }
+
+    private void LoopAndUpdateSprites(BodyPartScript[] partsArray, string dir)
+    {
+        foreach (BodyPartScript partScript in partsArray)
         {
             partScript.ChangeSpriteDirection(dir);
         }
-        foreach (BodyPartScript partScript in notCustomBodyParts)
-        {
-            partScript.ChangeSpriteDirection(dir);
-        }
+
     }
 }
