@@ -51,6 +51,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (isLeftPressed)
         {
+            Debug.Log("left key");
             PlayAnimation("WalkLeftKey");
         }
         if (isUpPressed)
@@ -61,16 +62,19 @@ public class PlayerScript : MonoBehaviour
         {
             PlayAnimation("WalkDownKey");
         }
-        if(!isRightPressed || isLeftPressed || isUpPressed || isDownPressed)
+        if(!(isRightPressed || isLeftPressed || isUpPressed || isDownPressed))
         {
-            Invoke("PlayIdle", 0.15f);
+            Debug.Log("PlayIdle??");
+            Invoke("PlayIdle", 0.25f);
         }
     }
 
     private void PlayAnimation(string nextAnimation)
     {
+        Debug.Log("Current PlayAnimation: " + animator.GetCurrentAnimatorStateInfo(0).IsName(nextAnimation));
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName(nextAnimation))
         {
+            Debug.Log("PlayAnimation: " + nextAnimation);
             animator.Play(nextAnimation);
             UpdateBodySpritesDirection(nextAnimation);
         }
@@ -79,7 +83,13 @@ public class PlayerScript : MonoBehaviour
 
     private void PlayIdle()
     {
-        animator.Play("Idle");
+        Debug.Log("void PlayIdle");
+        if (!(isRightPressed || isLeftPressed || isUpPressed || isDownPressed))
+        {
+            animator.Play("Idle");
+            UpdateBodySpritesDirection("WalkDownKey");
+        }
+        
     }
 
 
