@@ -4961,8 +4961,8 @@ MonoBehaviour:
     left: {fileID: 21300000, guid: 3beaab7c890a3da4fbfef573519d4e3a, type: 3}
     up: {fileID: 0}
   - name: Wizard
-    down: {fileID: 21300000, guid: ef00c0431e66e664981ac79b650a1510, type: 3}
-    left: {fileID: 21300000, guid: b647313e4d1a02e44ac01b69d3c71ae0, type: 3}
+    down: {fileID: 21300000, guid: 5f11a20d3ac591445a8e64db2bd28a60, type: 3}
+    left: {fileID: 21300000, guid: 5f11a20d3ac591445a8e64db2bd28a60, type: 3}
     up: {fileID: 0}
   - name: Headband
     down: {fileID: 21300000, guid: 071dfd84ac6e6bc4fbf35b32d87fdbcf, type: 3}

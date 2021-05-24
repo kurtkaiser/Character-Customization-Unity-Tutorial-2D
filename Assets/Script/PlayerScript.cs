@@ -19,6 +19,7 @@ public class PlayerScript : MonoBehaviour
     float moveSpeed = 5;
     Rigidbody2D rb;
     Animator animator;
+    string currentAnimation = "Idle";
 
 
     void Start()
@@ -44,23 +45,24 @@ public class PlayerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isRightPressed)
+        if (isRightPressed && currentAnimation != "WalkRightKey")
         {
             PlayAnimation("WalkRightKey");
         }
-        if (isLeftPressed)
+        if (isLeftPressed && currentAnimation != "WalkLeftKey")
         {
             PlayAnimation("WalkLeftKey");
         }
-        if (isUpPressed)
+        if (isUpPressed && currentAnimation != "WalkUpKey")
         {
            PlayAnimation("WalkUpKey");
         }
-        if (isDownPressed)
+        if (isDownPressed && currentAnimation != "WalkDownKey")
         {
             PlayAnimation("WalkDownKey");
         }
-        if(!(isRightPressed || isLeftPressed || isUpPressed || isDownPressed))
+        if(!(isRightPressed || isLeftPressed || isUpPressed || isDownPressed)
+            && currentAnimation != "Idle")
         {
             Invoke("PlayIdle", 0.25f);
         }
@@ -68,20 +70,19 @@ public class PlayerScript : MonoBehaviour
 
     private void PlayAnimation(string nextAnimation)
     {
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName(nextAnimation))
-        {
-            animator.Play(nextAnimation);
-            UpdateBodySpritesDirection(nextAnimation);
-        }
-            
+        animator.Play(nextAnimation);
+        UpdateBodySpritesDirection(nextAnimation);
+        currentAnimation = nextAnimation;            
     }
 
     private void PlayIdle()
     {
-        if (!(isRightPressed || isLeftPressed || isUpPressed || isDownPressed))
+        if (!(isRightPressed || isLeftPressed || isUpPressed || isDownPressed) 
+            && currentAnimation != "Idle")
         {
             animator.Play("Idle");
             UpdateBodySpritesDirection("WalkDownKey");
+            currentAnimation = "Idle";
         }
     }
 
@@ -101,7 +102,6 @@ public class PlayerScript : MonoBehaviour
 
     private void UpdateBodySpritesDirection(string dir)
     {
-        Debug.Log("dir: " + dir);
         LoopAndUpdateSprites(bodyParts, dir);
         LoopAndUpdateSprites(notCustomBodyParts, dir);
     }
