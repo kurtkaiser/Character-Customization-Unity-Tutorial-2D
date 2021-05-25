@@ -62,9 +62,6 @@ TagManager:
   - name: Arms
     uniqueID: 2677406913
     locked: 0
-  - name: Ears
-    uniqueID: 2647224859
-    locked: 0
   - name: Head
     uniqueID: 2668069241
     locked: 0
@@ -73,6 +70,9 @@ TagManager:
     locked: 0
   - name: Hair
     uniqueID: 204004981
+    locked: 0
+  - name: Ears
+    uniqueID: 2647224859
     locked: 0
   - name: HUD
     uniqueID: 114250447
