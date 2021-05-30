@@ -603,7 +603,6 @@ GameObject:
   - component: {fileID: 187500392}
   - component: {fileID: 187500393}
   - component: {fileID: 187500394}
-  - component: {fileID: 187500395}
   m_Layer: 0
   m_Name: Ears
   m_TagString: Skin
@@ -701,18 +700,6 @@ MonoBehaviour:
     down: {fileID: 21300000, guid: 7570778a4253d104c94b3686ffaf62da, type: 3}
     left: {fileID: 21300000, guid: 90bf698dd66b12e45b386d8ba392c96b, type: 3}
     up: {fileID: 0}
---- !u!114 &187500395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187500391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ba50718fa69be428a9408d997b9aeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &200992090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,7 +1831,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4d8d69b20bf205f4c9fafada7a043086, type: 3}
-    m_FontSize: 36
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -2324,7 +2311,7 @@ MonoBehaviour:
   - name: Caesar
     down: {fileID: 21300000, guid: 5021bd8b3cfe01146849d77e8a47ae9d, type: 3}
     left: {fileID: 21300000, guid: ad25fc2b9dc3df64e9ae91ac560aefca, type: 3}
-    up: {fileID: 21300000, guid: c3185b3744c3c0d42a1a82000f1ae644, type: 3}
+    up: {fileID: 21300000, guid: daaa066519330404f939c9371c471363, type: 3}
   - name: Long
     down: {fileID: 21300000, guid: e576343e8ed3a9941b5d0611453620f8, type: 3}
     left: {fileID: 21300000, guid: 28d045869a0935f498bbdd4eb3a6cf14, type: 3}
@@ -4962,7 +4949,7 @@ MonoBehaviour:
     up: {fileID: 0}
   - name: Headband
     down: {fileID: 21300000, guid: 071dfd84ac6e6bc4fbf35b32d87fdbcf, type: 3}
-    left: {fileID: 21300000, guid: 08bdfad556e97244cabb86a4eb67c603, type: 3}
+    left: {fileID: 21300000, guid: 6c67338f2f5ff274983fb5b4bb2cafd8, type: 3}
     up: {fileID: 0}
   - name: NoHat
     down: {fileID: 21300000, guid: 60849d83e959cc14cb5ba95d229a6675, type: 3}

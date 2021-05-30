@@ -138,7 +138,7 @@ public class ChSceneControllerScript : MonoBehaviour
         int i = 0;
         string[] allNames = new string[playerScript.bodyParts.Length];
         foreach (BodyPartScript partScript in playerScript.bodyParts)
-        {
+        {           
             allNames[i] = partScript.gameObject.name;
             i++;
         }
